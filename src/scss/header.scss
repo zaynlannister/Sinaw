@@ -1,9 +1,16 @@
 .header {
   background-color: #171836;
-  background-image: url("src/images/header-bg.png");
-  background-repeat: no-repeat;
-  background-size: 1100px 1000px;
   height: 1024px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    background-image: url("src/images/header-bg.png");
+    background-repeat: no-repeat;
+    width: 1000px;
+    height: 1000px;
+    background-size: contain;
+  }
 
   & .container {
     position: relative;
@@ -33,6 +40,10 @@
         &:hover {
           color: #ffff;
         }
+      }
+
+      &.active {
+        left: 0;
       }
     }
   }

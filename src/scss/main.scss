@@ -3,6 +3,7 @@ body {
   padding: 0;
   font-family: 'Inter', sans-serif;
   color: #ffff;
+  overflow-x: hidden;
 }
 
 .container {
@@ -38,4 +39,8 @@ input {
     border-color: #F5443B;
     background-color: transparent;
   }
+}
+
+.stop-scroll {
+  overflow: hidden;
 }
