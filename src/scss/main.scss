@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  color: #ffff;
+}
+
+.container {
+  width: 1120px;
+  margin: 0 auto;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+.primary-button {
+  background-color: #F5443B;
+  border-radius: 6px;
+  color: #ffff;
+  border: 1px solid #F5443B;
+  transition: 150ms ease;
+
+  &:hover {
+    color: #F5443B;
+    border-color: #F5443B;
+    background-color: transparent;
+  }
+}

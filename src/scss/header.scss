@@ -1,0 +1,157 @@
+.header {
+  background-color: #171836;
+  background-image: url("src/images/header-bg.png");
+  background-repeat: no-repeat;
+  background-size: 1100px 1000px;
+  height: 1024px;
+
+  & .container {
+    position: relative;
+  }
+
+  &__logo {
+    margin-right: 100px;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+
+    &-links {
+      width: 350px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+
+      & a {
+        color: rgba(255, 255, 255, 0.6);
+        transition: 120ms ease;
+
+        &:hover {
+          color: #ffff;
+        }
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+  }
+
+  &__action {
+    width: 180px;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+
+    &-button button {
+      padding: 10px 30px;
+    }
+  }
+
+  &__page {
+    position: absolute;
+    right: 0;
+    top: 200px;
+    width: 500px;
+    color: rgba(255, 255, 255, 0.4);
+
+    &-title {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 56px;
+      font-weight: 600;
+    }
+
+    &-subtitle {
+      margin: 30px 0;
+    }
+
+    &-input {
+      position: relative;
+
+      & input {
+        width: 100%;
+        font-size: 16px;
+        color: rgba(255, 255, 255, 0.8);
+        background-color: #1F2143;
+        border: 2px solid #1F2143;
+        border-radius: 12px;
+        padding: 16px 75px 20px 40px;
+        box-sizing: border-box;
+        transition: 150ms ease;
+
+        &:focus {
+          border: 2px solid #9A9CCB;
+        }
+      }
+    }
+
+    &-icon {
+      cursor: pointer;
+      position: absolute;
+      top: 7px;
+      right: 10px;
+      background-color: #282B57;
+      padding: 10px 15px;
+      border-radius: 6px;
+
+      & svg {
+        fill: #9A9CCB;
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+  &__suggestions {
+    margin-top: 30px;
+
+    &-title {
+      margin-bottom: 20px;
+    }
+
+    &-section {
+      & a {
+        display: inline-block;
+        padding: 10px;
+        border-radius: 8px;
+        font-size: 14px;
+        margin: 0 20px 20px 0;
+        color: rgba(154, 156, 203, 0.6);
+        border: 1px solid rgba(154, 156, 203, 0.6);
+        transition: 80ms ease;
+
+        &:hover {
+          color: #ffff;
+          border-color: #ffff;
+        }
+      }
+    }
+  }
+}
+
+.language {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+
+  &__icon-down svg {
+    fill: #ffff;
+    width: 14px;
+    height: 14px;
+    margin: 3px 3px 0 0;
+  }
+
+  &__icon-globe {
+    & svg {
+      fill: #9A9CCB;
+      width: 20px;
+      height: 20px;
+      margin: 4px 0 0 5px;
+    }
+  }
+}
