@@ -4,6 +4,7 @@ body {
   font-family: 'Inter', sans-serif;
   color: #ffff;
   overflow-x: hidden;
+  background-color: #171836;
 }
 
 .container {
@@ -43,4 +44,16 @@ input {
 
 .stop-scroll {
   overflow: hidden;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.subtitle {
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.4);
 }

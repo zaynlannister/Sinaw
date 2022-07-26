@@ -1,0 +1,86 @@
+.classes {
+  padding: 20px 0 120px;
+
+  &-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 0 100px;
+  }
+
+  &__text {
+    text-align: center;
+
+    &-title {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__card {
+    cursor: pointer;
+    width: 252px;
+    background-color: #1F2143;
+    border: 3px solid #323465;
+    border-radius: 20px;
+    padding: 10px;
+
+    &-image img {
+      border-radius: 20px;
+    }
+
+    &-sphere {
+      color: #3BF5BD;
+      font-size: 12px;
+      font-weight: 500;
+      margin: 12px 0;
+    }
+
+    &-title {
+      font-weight: 600;
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    &-subtitle {
+      font-size: 14px;
+      line-height: 21px;
+      color: rgba(255, 255, 255, 0.4);
+      margin: 14px 0;
+    }
+  }
+
+  &__button {
+    width: fit-content;
+    margin: 0 auto;
+    padding-bottom: 10px;
+
+    & button {
+      padding: 8px 40px;
+    }
+  }
+
+  &__author {
+    display: flex;
+    align-items: center;
+    border-top: 2px solid #292B56;
+    padding: 16px 0;
+
+    &-image {
+      margin-right: 10px;
+
+      & img {
+        border-radius: 20px;
+      }
+    }
+
+    &-name {
+      font-size: 14px;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    &-position {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.4);
+    }
+  }
+}
