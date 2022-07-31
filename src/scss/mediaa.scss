@@ -30,6 +30,25 @@
             padding: 0 20px;
         }
     }
+
+    .courses {
+        &__section {
+            display: block;
+        }
+
+        &__card {
+            width: unset;
+            margin-bottom: 60px;
+
+            &:last-child {
+                margin: unset;
+            }
+        }
+
+        &__button {
+            margin-top: 20px;
+        }
+    }
 }
 
 @media (max-width: 1030px) {
