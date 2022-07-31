@@ -16,13 +16,7 @@
   }
 
   &__card {
-    cursor: pointer;
     width: 252px;
-    background-color: #1F2143;
-    border: 3px solid #323465;
-    border-radius: 20px;
-    padding: 10px;
-    transition: 120ms ease;
 
     &-image img {
       border-radius: 20px;
@@ -46,10 +40,6 @@
       line-height: 21px;
       color: rgba(255, 255, 255, 0.4);
       margin: 14px 0;
-    }
-
-    &:hover {
-      box-shadow: 0 0 8px 7px rgba(255, 255, 255, 0.06);
     }
   }
 

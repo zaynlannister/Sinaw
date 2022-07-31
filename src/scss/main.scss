@@ -30,7 +30,7 @@ input {
 
 .primary-button {
   background-color: #F5443B;
-  border-radius: 6px;
+  border-radius: 4px;
   color: #ffff;
   border: 1px solid #F5443B;
   transition: 150ms ease;
@@ -39,6 +39,19 @@ input {
     color: #F5443B;
     border-color: #F5443B;
     background-color: transparent;
+  }
+}
+
+.secondary-button {
+  background-color: transparent;
+  color: #F5443B;
+  border: 1px solid #F5443B;
+  transition: 150ms ease;
+  border-radius: 4px;
+
+  &:hover {
+    color: #ffff;
+    background-color: #F5443B;
   }
 }
 
@@ -56,4 +69,17 @@ input {
   font-size: 18px;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.4);
+}
+
+.card {
+  cursor: pointer;
+  background-color: #1F2143;
+  border: 3px solid #323465;
+  border-radius: 20px;
+  padding: 10px;
+  transition: 120ms ease;
+
+  &:hover {
+    box-shadow: 0 0 8px 7px rgba(255, 255, 255, 0.06);
+  }
 }
