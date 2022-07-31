@@ -1,0 +1,45 @@
+.app {
+  position: relative;
+  background: linear-gradient(300deg, rgba(53,42,86,1) 0%, rgba(35,38,92,1) 100%);
+  border-radius: 40px;
+  padding: 80px 80px;
+
+  &::after {
+    position: absolute;
+    content: '';
+    background-image: url("src/images/app-section_img.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 410px;
+    height: 360px;
+    right: 40px;
+    bottom: 0;
+  }
+
+  &__content {
+    width: 450px;
+  }
+
+  &__title {
+    font-size: 47px;
+    color: #fff;
+    opacity: 0.7;
+  }
+
+  &__subtitle {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 32px;
+  }
+
+  &__images {
+    width: 340px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & div {
+      cursor: pointer;
+    }
+  }
+}
