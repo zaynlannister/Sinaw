@@ -49,6 +49,16 @@
             margin-top: 20px;
         }
     }
+
+    .app {
+        &__content {
+            width: unset;
+        }
+
+        &::after {
+            content: unset;
+        }
+    }
 }
 
 @media (max-width: 1030px) {
@@ -112,6 +122,14 @@
         flex-direction: column;
         align-items: center;
     }
+
+    .app {
+        padding: 40px;
+
+        &__title {
+            font-size: 35px;
+        }
+    }
 }
 
 @media (max-width: 870px) {
@@ -169,5 +187,12 @@
 
     .lecture__card {
         width: unset;
+    }
+}
+
+@media (max-width: 520px) {
+    .app__images {
+        width: unset;
+        display: block;
     }
 }
