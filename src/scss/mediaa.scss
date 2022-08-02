@@ -59,6 +59,10 @@
             content: unset;
         }
     }
+
+    .footer__links {
+        width: 620px;
+    }
 }
 
 @media (max-width: 1030px) {
@@ -129,6 +133,16 @@
         &__title {
             font-size: 35px;
         }
+    }
+
+    .footer {
+        &__info {
+            width: unset;
+        }
+    }
+
+    .footer__links {
+        display: none;
     }
 }
 
