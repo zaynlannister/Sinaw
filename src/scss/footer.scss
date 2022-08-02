@@ -1,0 +1,64 @@
+.footer {
+  padding: 140px 0 80px;
+
+  & .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__info {
+    width: 235px;
+  }
+
+  &__paragraph {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 27px;
+  }
+
+  &__social-media {
+    width: 120px;
+    display: flex;
+    justify-content: space-between;
+
+    & svg {
+      width: fit-content;
+      height: 25px;
+      fill: #ACABBF;
+      transition: 130ms ease;
+
+      &:hover {
+        cursor: pointer;
+        fill: #ffff;
+      }
+    }
+  }
+
+  &__links {
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+
+
+    &-section {
+      width: fit-content;
+
+      & a {
+        display: block;
+        color: rgba(255, 255, 255, 0.7);
+        margin-top: 16px;
+        transition: 110ms ease;
+
+        &:hover {
+          color: #ffff;
+        }
+      }
+    }
+
+    &-title {
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.8);
+    }
+  }
+}
