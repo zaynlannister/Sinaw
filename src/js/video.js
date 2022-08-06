@@ -36,10 +36,6 @@ class Video {
     unmute(videoElement) {
         videoElement.muted = false;
     }
-
-    rewind() {
-
-    }
 }
 
 function getVideoPLayerTemplate(props) {
@@ -55,7 +51,7 @@ function getVideoPLayerTemplate(props) {
             </div>
             <div class="video__line-wrapper" data-id="${props.id}">
               <div class="video__line video__line-${props.id}" data-id="${props.id}">
-              <div class="video__current-line video__current-line-${props.id}"></div>
+              <div class="video__current-line video__current-line-${props.id}" data-id="${props.id}"></div>
               </div>
             </div>
           </div>
@@ -150,6 +146,28 @@ allVideos.forEach(item => {
     item.addEventListener('canplay', setDuration);
     item.addEventListener('timeupdate', setCurrentDuration);
 })
+
+webinar.addEventListener('click', handleLine);
+
+function handleLine(event) {
+    let target = event.target;
+
+    if (target.classList.contains('video__line') || target.classList.contains('video__current-line')) {
+        videos.forEach(item => {
+            let video = document.querySelector(`.video-${item.id}`);
+            let id = target.getAttribute('data-id');
+
+            if (video.getAttribute('data-id') === id) {
+                let videoLine = document.querySelector(`.video__line-${id}`);
+                let width = videoLine.clientWidth;
+                let clickX = event.offsetX;
+                let duration = video.duration;
+
+                video.currentTime = (clickX / width) * duration;
+            }
+        })
+    }
+}
 
 
 // helpers
