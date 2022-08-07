@@ -40,8 +40,8 @@ class Video {
 
 function getVideoPLayerTemplate(props) {
     return `
-        <div class="video__player" data-id="${props.id}">
-          <video class="video video-${props.id}" data-id="${props.id}" src="https://data-1.utreon.com/v/Yj/A1/ZT/S832EgU6QQa/S832EgU6QQa_original.mp4"></video>
+        <div class="video__player swiper-slide" data-id="${props.id}">
+          <video class="video video-${props.id}" data-id="${props.id}" src="${props.src}"></video>
           <div class="video__wrapper">
             <div class="video__controller">
               <img class="video__playPause" data-id="${props.id}" src="src/images/play.png">
@@ -73,11 +73,11 @@ function renderVideos(element, dataVideos) {
     })
 }
 
-renderVideos('.webinar', responseFromServer);
+renderVideos('.swiper-wrapper', responseFromServer);
 
-let webinar = document.querySelector('.webinar');
+let swiperContainer = document.querySelector('.swiper-wrapper');
 
-webinar.addEventListener('click', handleVideo);
+swiperContainer.addEventListener('click', handleVideo);
 
 function handleVideo(event) {
     let target = event.target;
@@ -147,7 +147,7 @@ allVideos.forEach(item => {
     item.addEventListener('timeupdate', setCurrentDuration);
 })
 
-webinar.addEventListener('click', handleLine);
+swiperContainer.addEventListener('click', handleLine);
 
 function handleLine(event) {
     let target = event.target;
