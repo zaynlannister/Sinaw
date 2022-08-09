@@ -144,6 +144,7 @@
 }
 
 .language {
+  position: relative;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -163,5 +164,19 @@
       height: 20px;
       margin: 4px 0 0 5px;
     }
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    bottom: -5px;
+    height: 2px;
+    background-color: #9A9CCB;
+    transition: opacity .3s ease,width .3s ease;
+  }
+
+  &:hover::after {
+    width: 100%;
   }
 }
