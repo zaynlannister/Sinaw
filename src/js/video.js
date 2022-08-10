@@ -1,3 +1,16 @@
+// Helpers
+
+function turnIntoMinutes(timeDuration) {
+    let time = timeDuration;
+    let hours = Math.floor(time / 60 / 60);
+    let min = Math.floor(time / 60) - (hours * 60);
+    let sec = Math.floor(time % 60);
+
+    return `${min}:${sec.toString().padStart(2, '0')}`
+}
+
+// Components
+
 let responseFromServer = [
     {
         src: 'https://data-1.utreon.com/v/Yz/Fm/ZG/9zhRztOLp2Y/9zhRztOLp2Y_original.mp4',
@@ -37,6 +50,8 @@ class Video {
         videoElement.muted = false;
     }
 }
+
+// Business Logic
 
 function getVideoPLayerTemplate(props) {
     return `
@@ -167,16 +182,4 @@ function handleLine(event) {
             }
         })
     }
-}
-
-
-// helpers
-
-function turnIntoMinutes(timeDuration) {
-    let time = timeDuration;
-    let hours = Math.floor(time / 60 / 60);
-    let min = Math.floor(time / 60) - (hours * 60);
-    let sec = Math.floor(time % 60);
-
-    return `${min}:${sec.toString().padStart(2, '0')}`
 }
