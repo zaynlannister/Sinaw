@@ -106,8 +106,14 @@ function TranslateHtmlHandler(code) {
     /* Получаем язык на который переводим и производим необходимые манипуляции с DOM */
     /* We get the language to which we translate and produce the necessary manipulations with DOM */
     if (document.querySelector('[data-google-lang="' + code + '"]') !== null) {
+        changeLanguageText(code);
         document
             .querySelector('[data-google-lang="' + code + '"]')
             .classList.add("language__img_active");
     }
+}
+
+function changeLanguageText(language) {
+    const value = document.querySelector('.language__text');
+    value.innerHTML = language;
 }
