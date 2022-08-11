@@ -1,6 +1,6 @@
 @media (max-width: 1550px) {
     .header {
-        height: 775px;
+        //height: 775px;
     }
 
     .header::before {
@@ -18,6 +18,7 @@
 
 
     .header {
+        height: 775px;
         &::before {
             width: 540px;
             height: 540px;
@@ -182,10 +183,6 @@
                     color: #6d6d9a;
                 }
             }
-        }
-
-        &__action {
-            width: 230px;
         }
     }
 

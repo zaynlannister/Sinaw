@@ -1,0 +1,36 @@
+body {
+  position: unset!important;
+  top: 0!important;
+}
+
+/* Прячем панель гугла */
+
+.skiptranslate {
+  display: none !important;
+}
+
+/* Убираем подсветку ссылок */
+
+body .goog-text-highlight {
+  background-color: inherit;
+  box-shadow: none;
+  box-sizing: inherit;
+}
+
+/* language */
+
+.language__section {
+  position: absolute;
+  left: 0;
+}
+
+.language__img {
+  margin: 2px;
+  cursor: pointer;
+  opacity: .5;
+}
+
+.language__img:hover,
+.language__img_active {
+  opacity: 1;
+}
