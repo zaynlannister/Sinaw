@@ -215,3 +215,17 @@
         display: block;
     }
 }
+
+@media (max-width: 430px) {
+    .header__action-button {
+        display: none;
+    }
+
+    .language__page {
+        margin-right: 20px;
+    }
+
+    html body .login-link {
+        display: block;
+    }
+}

@@ -197,6 +197,7 @@
     padding: 10px;
     top: 74px;
     right: 20px;
+    margin-left: 20px;
     box-sizing: border-box;
     transition: 100ms all;
 
@@ -208,7 +209,7 @@
       clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
       background-color: #1F2143;
       top: -11px;
-      left: 30%;
+      left: 50%;
     }
 
     &.active {
