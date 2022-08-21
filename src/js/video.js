@@ -100,21 +100,14 @@ let swiperContainer = document.querySelector('.swiper-wrapper');
 
 swiperContainer.addEventListener('click', handleVideo);
 
-let number = 0;
-
 function handleVideo(event) {
     let target = event.target;
 
     if (target.hasAttribute('data-id')) {
-        number++
         let id = target.getAttribute('data-id');
 
         let video = document.querySelector(`.video-${id}`);
         let videoElement = videos.find(item => item.id === parseInt(id));
-
-        if (number === 1) {
-            addContentToVideoClasses()
-        }
 
         switch (target.className) {
             case 'video__playPause':
@@ -126,6 +119,8 @@ function handleVideo(event) {
         }
     }
 }
+
+window.addEventListener('DOMContentLoaded', addContentToVideoClasses)
 
 function addContentToVideoClasses() {
     for (let i = 1; i <= videos.length; i++) {
