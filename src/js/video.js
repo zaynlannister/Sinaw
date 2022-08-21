@@ -32,22 +32,23 @@ class Video {
     constructor(props) {
         this.src = props.src;
         this.id = props.id;
+        this.videoContent = null;
     }
 
-    play(videoElement) {
-        videoElement.play();
+    play() {
+        this.videoContent.play();
     }
 
-    pause(videoElement) {
-        videoElement.pause();
+    pause() {
+        this.videoContent.pause();
     }
 
-    mute(videoElement) {
-        videoElement.muted = true;
+    mute() {
+        this.videoContent.muted = true;
     }
 
-    unmute(videoElement) {
-        videoElement.muted = false;
+    unmute() {
+        this.videoContent.muted = false;
     }
 }
 
@@ -94,14 +95,21 @@ let swiperContainer = document.querySelector('.swiper-wrapper');
 
 swiperContainer.addEventListener('click', handleVideo);
 
+let number = 0;
+
 function handleVideo(event) {
     let target = event.target;
 
     if (target.hasAttribute('data-id')) {
+        number++
         let id = target.getAttribute('data-id');
 
         let video = document.querySelector(`.video-${id}`);
         let videoElement = videos.find(item => item.id === parseInt(id));
+
+        if (number === 1) {
+            addContentToVideoClasses()
+        }
 
         switch (target.className) {
             case 'video__playPause':
@@ -114,22 +122,28 @@ function handleVideo(event) {
     }
 }
 
+function addContentToVideoClasses() {
+    for (let i = 1; i <= videos.length; i++) {
+        videos[i-1].videoContent = document.querySelector(`.video-${i}`)
+    }
+}
+
 function playOrPauseVideo(videoElement, video, button) {
     if (video.paused) {
-        videoElement.play(video);
+        videoElement.play();
         button.src = 'src/images/pause.png';
     } else {
-        videoElement.pause(video);
+        videoElement.pause();
         button.src = 'src/images/play.png';
     }
 }
 
 function setVolume(videoElement, video, button) {
     if (video.muted) {
-        videoElement.unmute(video);
+        videoElement.unmute();
         button.src = 'src/images/volume.png';
     } else {
-        videoElement.mute(video);
+        videoElement.mute();
         button.src = 'src/images/volume-muted.png';
     }
 }
