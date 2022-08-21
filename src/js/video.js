@@ -37,7 +37,7 @@ class Video {
     constructor(props) {
         this.src = props.src;
         this.id = props.id;
-        this.videoContent = null;
+        this.videoContent = props.videoContent;
     }
 
     play() {
@@ -86,10 +86,7 @@ function renderVideos(element, dataVideos) {
     const container = document.querySelector(element);
 
     dataVideos.forEach(item => {
-        videos.push(new Video(item));
-    })
-
-    videos.forEach(item => {
+        console.log(item)
         container.innerHTML += getVideoPLayerTemplate(item);
     })
 }
@@ -120,12 +117,18 @@ function handleVideo(event) {
     }
 }
 
-window.addEventListener('DOMContentLoaded', addContentToVideoClasses)
+window.addEventListener('DOMContentLoaded', () => {
+    createInstance(responseFromServer)
+})
 
-function addContentToVideoClasses() {
-    for (let i = 1; i <= videos.length; i++) {
-        videos[i-1].videoContent = document.querySelector(`.video-${i}`)
-    }
+function createInstance(dataElements) {
+    dataElements.forEach(item => {
+        videos.push(new Video({
+            src: item.src,
+            id: item.id,
+            videoContent: document.querySelector(`.video-${item.id}`)
+        }));
+    })
 }
 
 function playOrPauseVideo(videoElement, video, button) {
