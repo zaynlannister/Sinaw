@@ -1,3 +1,8 @@
+import playImg from '/src/images/play.png';
+import volumeImg from '/src/images/volume.png';
+import pauseImg from '/src/images/pause.png';
+import volumeMutedImg from '/src/images/volume-muted.png';
+
 // Helpers
 
 function turnIntoMinutes(timeDuration) {
@@ -60,10 +65,10 @@ function getVideoPLayerTemplate(props) {
           <video class="video video-${props.id}" data-id="${props.id}" src="${props.src}"></video>
           <div class="video__wrapper">
             <div class="video__controller">
-              <img class="video__playPause" data-id="${props.id}" src="src/images/play.png">
+              <img class="video__playPause" data-id="${props.id}" src="${playImg}">
               <div class="video__duration video__duration-${props.id}" data-id="${props.id}">0:00</div>
               <div class="video__current-duration video__current-duration-${props.id}" data-id="${props.id}">0:00</div>
-              <img class="video__volume" data-id="${props.id}" src="src/images/volume.png">
+              <img class="video__volume" data-id="${props.id}" src="${volumeImg}">
             </div>
             <div class="video__line-wrapper" data-id="${props.id}">
               <div class="video__line video__line-${props.id}" data-id="${props.id}">
@@ -131,20 +136,20 @@ function addContentToVideoClasses() {
 function playOrPauseVideo(videoElement, video, button) {
     if (video.paused) {
         videoElement.play();
-        button.src = 'src/images/pause.png';
+        button.src = pauseImg;
     } else {
         videoElement.pause();
-        button.src = 'src/images/play.png';
+        button.src = playImg;
     }
 }
 
 function setVolume(videoElement, video, button) {
     if (video.muted) {
         videoElement.unmute();
-        button.src = 'src/images/volume.png';
+        button.src = volumeImg;
     } else {
         videoElement.mute();
-        button.src = 'src/images/volume-muted.png';
+        button.src = volumeMutedImg;
     }
 }
 
