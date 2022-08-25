@@ -1,14 +1,25 @@
 .header {
   height: 1024px;
 
-  &::before {
-    content: '';
+  //&::before {
+  //  content: '';
+  //  position: absolute;
+  //  background-image: url("/src/images/header-bg.png");
+  //  background-repeat: no-repeat;
+  //  width: 1000px;
+  //  height: 1000px;
+  //  background-size: contain;
+  //}
+
+  &__image {
+    z-index: -1;
     position: absolute;
-    background-image: url("/src/images/header-bg.png");
-    background-repeat: no-repeat;
-    width: 1000px;
-    height: 1000px;
-    background-size: contain;
+    top: 110px;
+
+    & img {
+      width: 650px;
+      object-fit: contain;
+    }
   }
 
   & .container {

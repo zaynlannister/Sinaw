@@ -19,16 +19,15 @@
 
     .header {
         height: 775px;
-        &::before {
-            width: 540px;
-            height: 540px;
-            margin-top: 201px;
-            opacity: 0.4;
-        }
 
         &__page {
             width: unset;
             padding: 0 20px;
+        }
+
+        &__image {
+            opacity: .4;
+            filter: blur(4px);
         }
     }
 
@@ -74,10 +73,6 @@
     .header {
         height: unset;
         padding-bottom: 80px;
-
-        &::before {
-            all: unset;
-        }
 
         &__page {
             position: unset;
@@ -188,6 +183,12 @@
 
     .menu-toggle {
         display: flex;
+    }
+}
+
+@media (max-width: 680px) {
+    .header__image img {
+        width: 100%;
     }
 }
 
