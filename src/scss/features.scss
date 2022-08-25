@@ -1,8 +1,9 @@
 .features {
+  padding: 0 0 100px;
+
   & .container {
     display: flex;
     justify-content: space-between;
-    padding: 100px 20px;
   }
 
   &-section {
