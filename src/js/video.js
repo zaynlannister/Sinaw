@@ -86,7 +86,6 @@ function renderVideos(element, dataVideos) {
     const container = document.querySelector(element);
 
     dataVideos.forEach(item => {
-        console.log(item)
         container.innerHTML += getVideoPLayerTemplate(item);
     })
 }
